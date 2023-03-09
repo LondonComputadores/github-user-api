@@ -8,7 +8,8 @@ app = FastAPI()
 access_token = access_token
 
 class User:
-    def __init__(self, name: str, url: str, public_repos: int, followers: int, following: int):
+    def __init__(self, name: str, url: str, public_repos: int, followers: int,
+                                                              following: int):
         self.name = name
         self.url = url
         self.public_repos = public_repos
@@ -19,7 +20,8 @@ class User:
 def get_user(username: str) -> User:
     g = Github(access_token)
     user = g.get_user(username)
-    return User(user.name, user.html_url, user.public_repos, user.followers, user.following)
+    return User(user.name, user.html_url, user.public_repos, user.followers, 
+                                                             user.following)
 
 def get_user_repos(username: str) -> Dict[str, str]:
     g = Github(access_token)
@@ -29,9 +31,12 @@ def get_user_repos(username: str) -> Dict[str, str]:
 def user_report(username: str) -> str:
     user = get_user(username)
     repos = get_user_repos(username)
-    report = f"Nome: {user.name}\nPerfil: {user.url}\nNúmero de repositórios publicos: {user.public_repos}\nNúmero de seguidores: {user.followers}\nNúmero de usuários seguidos: {user.following}\nRepositórios:\n"
+    report = f"Nome: {user.name}\nPerfil: {user.url}\
+            Número de repositórios publicos: {user.public_repos}\
+            Número de seguidores: {user.followers}\
+            Número de usuários seguidos: {user.following}\nRepositórios:"
     for name, url in repos.items():
-        report += f"{name}: {url}\n"            
+        report += f"{name}: {url}"         
     with open(f"{username}.txt", "w") as f:
         f.write(report)
         print(report)

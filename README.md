@@ -51,6 +51,7 @@ Fontes:
  - https://stackoverflow.com/questions/56362354/typeerror-assertequal-missing-1-required-positional-argument-second
  - https://testdriven.io/courses/tdd-fastapi/docker-config/
  - https://www.uvicorn.org/#hypercorn
+ - https://realpython.com/python-assert-statement/
 
 
 Solução final:

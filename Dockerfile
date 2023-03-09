@@ -20,6 +20,6 @@ COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
 # add app
-COPY . /home/app/
+COPY . .
 
 #CMD ["hypercorn app:app", "/home/app/app.py"]
