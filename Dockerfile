@@ -3,7 +3,7 @@ FROM python:3.10.8-slim-buster
 
 # set working directory
 RUN mkdir -p /home/app
-#WORKDIR /usr/src/app
+WORKDIR /home/app
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
