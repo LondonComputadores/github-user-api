@@ -1,0 +1,4 @@
+fastapi
+pygithub
+uvicorn
+hypercorn

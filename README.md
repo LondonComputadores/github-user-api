@@ -1,5 +1,12 @@
 # github-user-api
 
+Como usar esse app no navegador?
+R.: 
+   1- Antes de mais nada, colocar seu Github Token na variável access_token dento de:
+    ./app/github_token.py
+   2- docker-compose up -d 
+   3- ou vá até ao diretório app/app.py e executa: hypercorn app:app --reload e abra o localhost:8000/docs
+
 Problema:
 
  - Obter dados de usuário de alguma conta do Github via sua API com Python e Testes e escrever os resultados obtidos num simples arquivo de texto
@@ -40,6 +47,8 @@ Fontes:
  - https://github.com/LondonComputadores/backend-restapi-django-advanced-repo/blob/master/app/core/tests/test_models.py
  - https://docs.python.org/2/library/unittest.html#assert-methods
  - https://stackoverflow.com/questions/56362354/typeerror-assertequal-missing-1-required-positional-argument-second
+ - https://testdriven.io/courses/tdd-fastapi/docker-config/
+ - https://www.uvicorn.org/#hypercorn
 
 
 Solução final:
