@@ -62,4 +62,7 @@ Fontes:
 
 Solução final:
 
- - 
+ - https://github.com/LondonComputadores/github-user-api/blob/main/app/app.py
+
+ - https://github.com/LondonComputadores/github-user-api/blob/main/FastAPI%20-%20Swagger%20UI.pdf
+ 
