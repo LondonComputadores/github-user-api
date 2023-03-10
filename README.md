@@ -3,11 +3,13 @@
 Como usar esse app no navegador?
 R.: 
    1. Antes de mais nada, colocar seu Github Token na variável access_token dento de:
-    ./app/github_token.py
+     ./app/github_token.py ou apenas decomentar a variável access_token e colar seu
+      token dentro das aspas substituindo a instrução nela contida.
    2. docker-compose up -d 
-   3. ou vá até ao diretório app/app.py e executar: uvicorn app:app --reload e abra o navegador para acessar localhost:8000/docs
-   4. clicar em Try it out no canto superior direito
-   5. Digitar ou colar seu usuário nos campos marcados como *required
+   3. ou python -m venv venv etc... + pip install -r requirements.txt
+   4. Vá até ao diretório app/app.py e executar: uvicorn app:app --reload e abra o navegador para acessar localhost:8000/docs
+   5. clicar em Try it out no canto superior direito
+   6. Digitar ou colar seu usuário nos campos marcados como *required
 
 Problema:
 
@@ -41,6 +43,7 @@ Fontes:
 
  - https://docs.github.com/en/rest?apiVersion=2022-11-28
  - https://fastapi.tiangolo.com/
+ - https://github.com/tiangolo/fastapi
  - https://github.com/PyGithub/PyGithub
  - https://pygithub.readthedocs.io/en/latest/introduction.html
  - https://www.thepythoncode.com/article/using-github-api-in-python
@@ -52,6 +55,9 @@ Fontes:
  - https://testdriven.io/courses/tdd-fastapi/docker-config/
  - https://www.uvicorn.org/#hypercorn
  - https://realpython.com/python-assert-statement/
+ - https://realpython.com/django-1-6-test-driven-development/
+ - https://realpython.com/python-continuous-integration/
+ - https://realpython.com/python-testing/
 
 
 Solução final:
